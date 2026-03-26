@@ -1,0 +1,9 @@
+bot_url: "http://localhost:9090"
+
+whitelist:
+  enabled: true
+  premium_bypass: true
+
+# Discord <-> Minecraft chat
+chat:
+  enabled: true

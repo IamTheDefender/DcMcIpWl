@@ -1,0 +1,45 @@
+commands:
+  msgorb:
+    command: "execute as <player> run say <message>"
+    variables:
+      # the variable name, here it is <player> and "PLAYER" is the variable type
+      player:
+        type: PLAYER
+        # Used for discord slash commands, has no effect in-game
+        description: "The player to send the message as."
+      message:
+        type: STRING
+        # Used for discord slash commands, has no effect in-game
+        description: "The message to send."
+    permission: "command.msgorb"
+    cooldown: 1000 # in milliseconds
+    cooldown_message: "No spam please."
+    description: "This commands sends message a player"
+    admin_only: true
+
+# As these command have special logic in the bot, they can't be customized to execute some other command
+# So /ban can be changed to /bonk but the function of /ban cannot be changed from banning a player to something else
+# Make sure to NOT change the command id, only change the command.<command_id>.name to customize the command
+# The application excepts the path to exist, for example default-commands.ban.name must exist or the application will not use the custom name
+default-commands:
+  ban:
+    name: "ban"
+    description: "Ban a player."
+  kick:
+    name: "kick"
+    description: "Kick a player."
+  link:
+    name: "link"
+    description: "Link your Discord with your Minecraft account."
+  mute:
+    name: "mute"
+    description: "Mute a player."
+  server:
+    name: "server"
+    description: "Control the server."
+  unban:
+    name: "unban"
+    description: "Unban a player."
+  unmute:
+    name: "unmute"
+    description: "Unmute a player."

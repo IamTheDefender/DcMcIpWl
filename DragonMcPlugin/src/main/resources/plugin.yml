@@ -1,0 +1,24 @@
+name: DragonMcPlugin
+version: '${version}'
+main: xyz.iamthedefender.dragonmc.DragonMcPlugin
+api-version: '1.21'
+description: 'Discord integration, link-based whitelist, moderation, chat bridge and custom commands for DragonMC.'
+authors:
+  - "IamTheDefender (prodev)"
+
+permissions:
+  dragon.admin:
+    description: Full admin access
+    default: op
+  dragon.ban:
+    description: Ban/unban players
+    default: op
+  dragon.kick:
+    description: Kick players
+    default: op
+  dragon.mute:
+    description: Mute/unmute players
+    default: op
+  dragon.alias:
+    description: Manage command aliases
+    default: op
